@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>hello world</title>
+    <link href="index.css" rel="stylesheet" type="text/css">
+  </head>
+  <body data-index="0">
+    <div id="app">
+      <section class="active">
+        <h1>张皛珏 &amp; 颜耀</h1>
+        <img src="img/1-2.png" />
+        <dl>
+          <dt>Time</dt>
+          <dd>2016年5月22日 11时10分<br />
+          农历四月十六（周日）</dd>
+          <dt>Address</dt>
+          <dd>西什库天主堂 &amp; 大三元酒家</dd>
+        </dl>
+      </section>
+
+      <section class="nav">
+        <p>我们的婚礼很简单，希望能邀请至亲的您，来现场给我们祝福<br />
+          11:15 我们在西什库教堂请主见证，然后前往大三元酒家用餐。<br />
+          您也可以直接前往大三元，预计 12:15 酒席开始<br />
+          届时附近停车位可能很紧张，建议您乘坐公交车前往~</p>
+        <img src="img/2-1.png" />
+        <p>
+          <a href="http://map.baidu.com/mobile/webapp/place/detail/qt=ninf&uid=e3dec41cfb210eeb59bbbc2e">西什库教堂 导航</a>
+          <a href="http://map.baidu.com/mobile/webapp/place/detail/qt=inf&uid=c879fa0197ee5353c909f023">大三元酒家 导航</a>
+        </p>
+      </section>
+
+      <section class="form">
+        <h2>留言......</h2>
+        <form action="/api" method="POST">
+        <p class="field"><label><b>您的名字:</b> <input type="text" name="name" /></label></p>
+        <p class="field"><b>您会来现场祝福我们吗？</b><br />
+          <label><input type="radio" name="live" value="1" checked="1" /> 当然！教堂和酒席我都去！</label><br />
+          <label><input type="radio" name="live" value="2" /> 我直接去酒席</label><br />
+          <label><input type="radio" name="live" value="3" /> 我是爱你的，但是我去不了，远程祝福～</label><br />
+        </p>
+        <p class="field"><b>赴宴人数？</b><br />
+          <label><input type="radio" name="number" value="1" checked="1" /> 1人</label>
+          <label><input type="radio" name="number" value="2" /> 2人</label>
+          <label><input type="radio" name="number" value="3" /> 3人</label>
+          <label><input type="radio" name="number" value="4" /> 4人</label>
+        </p>
+        </form>
+        <a class="submit" href="###">填好了，提交</a>
+      </section>
+    </div>
+    <script src="index.js" defer></script>
+  </body>
+</html>
