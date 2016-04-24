@@ -118,6 +118,7 @@ body[data-index="2"] {
 .arrow img {
   position: absolute;
   top: 50%;
+  z-index: 20;
 }
 .arrow .left {
   left: 0;

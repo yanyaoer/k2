@@ -23,7 +23,7 @@ var touch = {
 
 var touchHandler = function(event) {
   //console.log(event.type);
-  var deltaX;
+  var delta = {};
   switch (event.type) {
     case 'touchstart':
       {
@@ -56,7 +56,6 @@ var touchHandler = function(event) {
 
         touch.status = 'moving';
         touch.lastMoveTime = Date.now();
-        //deltaX = event.touches[0].clientX - touch.last.clientX;
         touch.last = event.touches[0];
         //console.log(touch.start.x, touch.last.clientX);
         break;
@@ -68,13 +67,16 @@ var touchHandler = function(event) {
           return;
         }
         touch.status = 'end';
-        deltaX = touch.start.x  - touch.last.clientX;
         touch.endTime = Date.now();
-        var touchMoveDirection = deltaX / Math.abs(deltaX);
-        //console.log(deltaX, touchMoveDirection, '::dir');
+        delta.X = touch.start.x - touch.last.clientX;
+        delta.Y = touch.start.y - touch.last.clientY;
+        delta.d = (Math.abs(delta.X) > Math.abs(delta.Y)) ? delta.X : delta.Y;
+        //console.log(delta.X, touchMoveDirection, '::dir::vertical');
+        //console.log(delta.Y, touchMoveDirection, '::dir::horizon');
 
-        if (Math.abs(deltaX) > document.body.clientWidth / 4) {
-          touch.slideTo(touchMoveDirection);
+        if (Math.abs(delta.d) > document.body.clientWidth / 4) {
+          var direction = delta.d / Math.abs(delta.d);
+          touch.slideTo(direction);
         }
         break;
       }
