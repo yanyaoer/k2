@@ -23,20 +23,20 @@ dd {
   margin: 0;
 }
 body {
-  background: #f9f8ea url("img/1-1.png") 50% -45px/100% no-repeat;
-  padding-top: 100px;
+  background: #f9f8ea url("img/background.png") 0 0/100% repeat-y;
   box-sizing: border-box;
 }
-body[data-index="1"] {
-  background-position: 50% -60px;
-  padding-top: 80px;
+body[data-index="0"] #app {
+  background: url("img/welcome.png") 50% 98%/90% no-repeat;
 }
-body[data-index="1"] #app {
-  background: url("img/2-5.png") 50% 100%/100% no-repeat;
+body[data-index="1"] {
+  padding-top: 10px;
 }
 body[data-index="2"] {
   padding-top: 30px;
-  background: #f9f8ea url("img/3-0.png") 50% 0/100% no-repeat;
+}
+[hide] {
+  display: none;
 }
 #app {
   height: 100%;
@@ -44,24 +44,14 @@ body[data-index="2"] {
   text-align: center;
   font-family: Helvetica, sans-serif;
   line-height: 2;
-  color: #58479c;
-}
-#app dt {
-  color: #41b0d8;
-}
-#app p {
-  font-size: 12px;
-  color: #41b0d8;
+  color: #f7d37c;
 }
 #app img {
   margin: auto;
-  padding: 2px;
-  background: #fff;
-  box-shadow: 0 0 10px #829acf;
-  border-radius: 5px;
   max-width: 90%;
 }
 #app section {
+  width: 100%;
   opacity: 0;
   position: absolute;
   -webkit-backface-visibility: hidden;
@@ -71,7 +61,6 @@ body[data-index="2"] {
   -webkit-transition: all 0.5s ease;
   opacity: 1;
   z-index: 10;
-  width: 100%;
 }
 #app section a {
   display: inline-block;
@@ -79,15 +68,22 @@ body[data-index="2"] {
   border-radius: 5px;
   text-decoration: none;
   color: #fff;
-  background: #41b0d8;
+}
+#app section.intro h1 {
+  font-weight: normal;
+}
+#app section.intro h1 em {
+  display: inline-block;
+  width: 1em;
 }
 #app section.nav a {
   margin: 10px;
   padding-left: 2rem;
-  background: #41b0d8 url("img/3-2.png") 5px 50% no-repeat;
+  background: #e59512 url("img/2-4.png") 5px 50% no-repeat;
 }
 #app section.form {
   text-align: left;
+  color: #e59512;
 }
 #app section.form h2 {
   margin: 0 2rem;
@@ -101,10 +97,12 @@ body[data-index="2"] {
 }
 #app section.form a {
   margin-left: 2rem;
+  background: #e59512;
 }
 #app section.form .field {
+  font-size: 16px;
   border-radius: 5px;
-  border: 2px solid #41b0d8;
+  border: 2px solid #e59512;
   background: #fff;
   margin: 0 2rem 1rem;
   padding: 5px 10px;

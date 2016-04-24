@@ -104,3 +104,7 @@ document.addEventListener('click', function(e) {
     return false;
   }
 }, false);
+
+window.onload = function(){
+  document.querySelector('#app').removeAttribute('hide');
+}
