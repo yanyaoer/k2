@@ -99,7 +99,7 @@ document.addEventListener('click', function(e) {
     request.open('POST', '/api');
     request.onload = function(){
       if (request.responseText === 'ok') {
-        form.parentNode.innerHTML = "<h3>欢迎光临...</h3>";
+        form.parentNode.innerHTML = "<h3>欢迎光临...</h3><center>提交成功</center>";
       }
     };
     request.send(data);
