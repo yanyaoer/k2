@@ -45,12 +45,14 @@ body
   section
     width 100%
     opacity 0
+    visibility hidden
     position absolute
     -webkit-backface-visibility hidden
     -webkit-transform-style preserve-3d
     &.active
       -webkit-transition: all .5s ease
       opacity 1
+      visibility visible
       z-index 10
     a
       display inline-block
@@ -95,6 +97,7 @@ body
           border 0 none
           font-size d
           line-height d
+          max-width 160px
 
 .arrow
   img

@@ -53,6 +53,7 @@ body[data-index="2"] {
 #app section {
   width: 100%;
   opacity: 0;
+  visibility: hidden;
   position: absolute;
   -webkit-backface-visibility: hidden;
   -webkit-transform-style: preserve-3d;
@@ -60,6 +61,7 @@ body[data-index="2"] {
 #app section.active {
   -webkit-transition: all 0.5s ease;
   opacity: 1;
+  visibility: visible;
   z-index: 10;
 }
 #app section a {
@@ -111,6 +113,7 @@ body[data-index="2"] {
   border: 0 none;
   font-size: 18px;
   line-height: 18px;
+  max-width: 160px;
 }
 .arrow img {
   position: absolute;
