@@ -2,7 +2,7 @@ require('dotenv').config();
 import path from 'path';
 import Koa from 'koa';
 import Router from 'koa-router';
-import redisy from 'koa-redisy';
+import redisy from './redisy';
 import views from 'koa-views';
 import serve from 'koa-static';
 import stylus from 'koa-stylus';
